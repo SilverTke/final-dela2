@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #242933;
+  color: white;
+  display: grid;
+  grid-template-areas:
+    "main"
+    "footer";
+  min-height: 100dvh;
+  grid-template-rows: 1fr 3rem;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  background-color: #191d24;
+  grid-area: footer;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4px;
+  gap: 10px;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #1e222a;
+  display: none;
+}
+
+.grid-item>img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-4px);
+}
+
+@media (min-width: 576px) {
+  body {
+    grid-template-areas:
+      "nav main"
+      "footer footer";
+    grid-template-columns: 20% 1fr;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  .image-grid {
+    padding: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}

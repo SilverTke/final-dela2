@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Una prueba</title>
+    <link href='{{"/assets/css/style.css" |> url}}' rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <p id="logo">Una prueba</p>
+    </nav>
+    <main>
+      <div class="image-grid">
+        {{ for image of images }}
+          <div class="grid-item"><img src="{{image.src |> url}}"></div>
+        {{ /for }}
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

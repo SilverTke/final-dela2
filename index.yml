@@ -1,0 +1,5 @@
+layout: base.vto
+images:
+  - src: https://picsum.photos/seed/hey/300/200
+  - src: https://picsum.photos/seed/homero/300/200
+  - src: https://picsum.photos/seed/larva/300/200
