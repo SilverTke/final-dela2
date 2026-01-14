@@ -9,19 +9,33 @@
   </head>
   <body>
     <nav>
-      <p id="logo">Una prueba</p>
+      <h1 id="logo">Una prueba</h1>
+      <a href="#images">Algunas fotos</a>
+      <a href="#moreImages">Más fotos</a>
     </nav>
     <main>
+      <h1 id="images">Algunas fotos</h1>
       <div class="image-grid">
         {{ for image of images }}
           <div class="grid-item"><img src="{{image.src |> url}}"></div>
         {{ /for }}
       </div>
+      <h1 id="moreImages">Más fotos</h1>
+      <div class="image-grid">
+        {{for image of more_images }}
+          <div class="grid-item"><img src="{{image.src |> url}}"></div>
+        {{ /for }}
+      </div>
     </main>
     <footer>
-    {{for social of socials}}
-      <a href="{{social.url}}"><img class="fill-white" src="{{social.icon.name |> icon(social.icon.catalog)}}" width="32" inline></a>
-    {{/for}}
+      {{ for social of socials }}
+        <a href="{{social.url}}"><img
+            class="fill-white"
+            src="{{social.icon.name |> icon(social.icon.catalog)}}"
+            width="32"
+            inline
+          ></a>
+      {{ /for }}
     </footer>
   </body>
 </html>
