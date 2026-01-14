@@ -5,7 +5,7 @@ import unocss from "lume/plugins/unocss.ts";
 
 const site = lume();
 
-site.add("/assets");
+site.add("/assets").ignore("README.md");
 
 site.use(unocss({ cssFile: "assets/css/uno.css" })).use(icons()).use(inline());
 

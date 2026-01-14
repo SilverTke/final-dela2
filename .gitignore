@@ -1,3 +1,5 @@
 _site
 _cache
 .env
+# Nomás por los commits
+node_modules
